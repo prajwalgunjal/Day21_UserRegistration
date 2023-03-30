@@ -21,7 +21,13 @@ public class UserRegistration {
         else
             return false;
     }
-
-
+    public boolean validateEmail(String Email) {
+        Pattern pattern3 = Pattern.compile("^[0-9a-zA-Z]+([a-z0-9A-Z]+)*[@][a-zA-Z]+[.][a-z]{2,4}([.][a-z]{2})?$");
+        Matcher matcher3 = pattern3.matcher(Email);
+        if (matcher3.matches())
+            return true;
+        else
+            return false;
+    }
 
 }

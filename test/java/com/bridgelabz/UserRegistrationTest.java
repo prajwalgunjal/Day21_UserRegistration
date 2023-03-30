@@ -29,4 +29,11 @@ public static void init(){
         Assertions.assertTrue(LastName);
         System.out.println("Last Name Checked :- Successfully passed UC2");
     }
+
+    @Test
+    void givenEmailidShouldReturnTrue(){
+    boolean Email = userRegistration.validateEmail("Prajwal23@gmail.com");
+    Assertions.assertTrue(Email);
+        System.out.println("Email ID Checked :- Successfully Passed UC3");
+    }
 }
