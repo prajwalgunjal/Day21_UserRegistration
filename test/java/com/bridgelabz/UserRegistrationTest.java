@@ -10,7 +10,6 @@ import java.util.regex.Pattern;
 
 public class UserRegistrationTest {
     static UserRegistration userRegistration;
-    static String name;
 
 @BeforeAll
 public static void init(){
@@ -35,5 +34,11 @@ public static void init(){
     boolean Email = userRegistration.validateEmail("Prajwal23@gmail.com");
     Assertions.assertTrue(Email);
         System.out.println("Email ID Checked :- Successfully Passed UC3");
+    }
+    @Test
+    void givenMobileNumberShouldReturnTrue(){
+        boolean PhoneNumber = userRegistration.validatPhoneNumber("919881640062");
+        Assertions.assertTrue(PhoneNumber);
+        System.out.println("PhoneNumber Checked :- Successfully Passed UC4");
     }
 }
