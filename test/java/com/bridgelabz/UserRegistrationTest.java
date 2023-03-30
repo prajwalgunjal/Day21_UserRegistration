@@ -41,4 +41,11 @@ public static void init(){
         Assertions.assertTrue(PhoneNumber);
         System.out.println("PhoneNumber Checked :- Successfully Passed UC4");
     }
+
+    @Test
+    void checkPasswordShouldReturnTrue(){
+    boolean Password = userRegistration.validatePassword("PrajwalPune");
+    Assertions.assertTrue(Password);
+        System.out.println("Password Checked :- Successfully Passes UC5");
+    }
 }
