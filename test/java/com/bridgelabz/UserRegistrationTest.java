@@ -46,6 +46,6 @@ public static void init(){
     void checkPasswordShouldReturnTrue(){
     boolean Password = userRegistration.validatePassword("PrajwalPune");
     Assertions.assertTrue(Password);
-        System.out.println("Password Checked :- Successfully Passes UC5");
+        System.out.println("Password Checked(Rule1 & Rule2) :- Successfully Passes UC5");
     }
 }
