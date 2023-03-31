@@ -44,8 +44,8 @@ public static void init(){
 
     @Test
     void checkPasswordShouldReturnTrue(){
-    boolean Password = userRegistration.validatePassword("Prajwal12");
+    boolean Password = userRegistration.validatePassword("Password1@");
     Assertions.assertTrue(Password);
-        System.out.println("Password Checked(Rule1 & Rule2 & Rule3) :- Successfully Passes UC5,UC6,UC7");
+        System.out.println("Password Checked(Rule1 & Rule2 & Rule3,Rule4,Rule5) :- Successfully Passes UC5,UC6,UC7,UC8");
     }
 }
