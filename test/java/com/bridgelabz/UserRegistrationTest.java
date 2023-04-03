@@ -8,6 +8,22 @@ public static void init(){
     System.out.println("Before all");
     userRegistration = new UserRegistration();
 }
+
+// static MoodAnalyzer mood;
+//
+//
+//    @Test
+//    public void testAnalyseAbilityMethod_thenAssertionHappy() {
+//        mood = new MoodAnalyzer("I am in Happy Mood");
+//        assertEquals("HAPPY", mood.analyseability());
+//        System.out.println("UC1: Test Case For Happy Passed");
+//    }
+//
+//    @Test
+//    public void testAnalyseAbilityMethod_thenAssertionSad() {
+//        mood = new MoodAnalyzer("I am in Sad Mood");
+//        assertEquals("SAD", mood.analyseability());
+//        System.out.println("UC1: Test Case For Sad Passed");
 @Test
     void givenFirstnameshouldreturnTrue(){
         boolean value = userRegistration.validate("Prajwal");
@@ -20,7 +36,6 @@ public static void init(){
         Assertions.assertTrue(LastName);
         System.out.println("Last Name Checked :- Successfully passed UC2");
     }
-
     @Test
     void givenEmailidShouldReturnTrue(){
     boolean Email = userRegistration.validateEmail("Prajwal23@gmail.com");
