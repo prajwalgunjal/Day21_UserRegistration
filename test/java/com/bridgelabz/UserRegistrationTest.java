@@ -8,55 +8,38 @@ public static void init(){
     System.out.println("Before all");
     userRegistration = new UserRegistration();
 }
-
-// static MoodAnalyzer mood;
-//
-//
-//    @Test
-//    public void testAnalyseAbilityMethod_thenAssertionHappy() {
-//        mood = new MoodAnalyzer("I am in Happy Mood");
-//        assertEquals("HAPPY", mood.analyseability());
-//        System.out.println("UC1: Test Case For Happy Passed");
-//    }
-//
-//    @Test
-//    public void testAnalyseAbilityMethod_thenAssertionSad() {
-//        mood = new MoodAnalyzer("I am in Sad Mood");
-//        assertEquals("SAD", mood.analyseability());
-//        System.out.println("UC1: Test Case For Sad Passed");
 @Test
-    void givenFirstnameshouldreturnTrue(){
+    void givenFirstnameshouldreturnTrue() throws InvalidFirstNameException {
         boolean value = userRegistration.validate("Prajwal");
         Assertions.assertTrue(value);
     System.out.println("First Name Checked:- Successfully passed UC1");
     }
     @Test
-    void givenLastNameShouldReturnTrue(){
+    void givenLastNameShouldReturnTrue()throws InvalidLastNameException{
         boolean LastName = userRegistration.validateLastname("Gunjal");
         Assertions.assertTrue(LastName);
         System.out.println("Last Name Checked :- Successfully passed UC2");
     }
     @Test
-    void givenEmailidShouldReturnTrue(){
+    void givenEmailidShouldReturnTrue()throws InvalidEmailIdException{
     boolean Email = userRegistration.validateEmail("Prajwal23@gmail.com");
     Assertions.assertTrue(Email);
         System.out.println("Email ID Checked :- Successfully Passed UC3");
     }
     @Test
-    void givenMobileNumberShouldReturnTrue(){
+    void givenMobileNumberShouldReturnTrue()throws InvalidPhoneNumberException{
         boolean PhoneNumber = userRegistration.validatPhoneNumber("919881640062");
         Assertions.assertTrue(PhoneNumber);
         System.out.println("PhoneNumber Checked :- Successfully Passed UC4");
     }
-
     @Test
-    void checkPasswordShouldReturnTrue(){
+    void checkPasswordShouldReturnTrue()throws InvalidPasswordException{
     boolean Password = userRegistration.validatePassword("Password1@");
     Assertions.assertTrue(Password);
         System.out.println("Password Checked(Rule1 & Rule2 & Rule3,Rule4,Rule5) :- Successfully Passes UC5,UC6,UC7,UC8");
     }
     @Test
-    void checkEmailShouldReturnTrue(){
+    void checkEmailShouldReturnTrue()throws InvalidEmailIdException{
         String Arr[] = {"abc@yahoo.com","abc@yahoo.com","abc-100@yahoo.com","abc111@abc.com","abc-100@abc.net","abc.100@abc.com.au","abc@1.com","abc@gmail.com.com","abc+100@gmail.com","abc@yahoo.com"};
         for(int i=0;i< Arr.length;i++)
         {
